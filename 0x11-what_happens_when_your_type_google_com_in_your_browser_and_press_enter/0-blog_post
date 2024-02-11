@@ -1,0 +1,43 @@
+# The Journey of a URL: Demystifying the Web Stack
+
+---
+
+## Introduction:
+
+When you type "https://www.google.com" into your browser and hit Enter, a complex and fascinating journey begins. In this blog post, we'll explore the step-by-step process that takes place behind the scenes, involving DNS requests, TCP/IP, firewalls, HTTPS/SSL, load-balancers, web servers, application servers, and databases.
+
+## 1. DNS Request:
+
+The first step in the journey is the Domain Name System (DNS) resolution. The browser needs to convert the human-readable domain "www.google.com" into an IP address that the computer can understand. It sends a DNS request to a DNS server, which then resolves the domain to the corresponding IP address.
+
+## 2. TCP/IP:
+
+With the IP address in hand, the browser initiates a connection using the Transmission Control Protocol (TCP) and the Internet Protocol (IP). TCP ensures reliable and ordered delivery of data, while IP handles addressing and routing of packets across the Internet.
+
+## 3. Firewall:
+
+As the connection is established, it may pass through firewalls, which act as a barrier between the user's computer and the external servers. Firewalls monitor and control incoming and outgoing network traffic based on predetermined security rules.
+
+## 4. HTTPS/SSL:
+
+In modern web browsing, security is paramount. The browser and the server engage in a handshake to establish a secure connection using the Hypertext Transfer Protocol Secure (HTTPS) and the Secure Sockets Layer (SSL) or Transport Layer Security (TLS) protocols. This encryption ensures that the data exchanged between the user and the server remains confidential and secure.
+
+## 5. Load-Balancer:
+
+Large-scale websites like Google often employ load-balancers to distribute incoming traffic across multiple servers. This ensures efficient utilization of resources, improves response times, and enhances the overall reliability of the service. Load-balancers play a crucial role in maintaining optimal performance, especially during peak usage periods.
+
+## 6. Web Server:
+
+After passing through the load-balancer, the request reaches one of Google's web servers. The web server processes the request, handling tasks such as retrieving web pages, executing scripts, and interacting with databases.
+
+## 7. Application Server:
+
+For dynamic content and complex tasks, the web server may communicate with an application server. Application servers execute server-side code, handle business logic, and generate dynamic content to be sent back to the user's browser.
+
+## 8. Database:
+
+In many cases, the application server interacts with a database to retrieve or store data. Google, being a search engine, relies heavily on databases to fetch relevant search results. This step involves querying, updating, or inserting data into the database based on the user's request.
+
+## Conclusion:
+
+The journey of a URL from the browser to the server involves a complex interplay of technologies and systems, each playing a crucial role in delivering a seamless user experience. Understanding this web stack is essential for any software engineer, and mastering these concepts can set you apart in the competitive world of technology.
