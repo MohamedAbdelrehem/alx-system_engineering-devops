@@ -1,0 +1,44 @@
+digraph WebRequestFlow {
+  rankdir=LR;
+  
+  subgraph cluster_browser {
+    style=invis;
+    Browser [label="Browser", shape=box];
+  }
+
+  subgraph cluster_dns {
+    label="DNS Resolution";
+    DNS [label="DNS Server", shape=box];
+    Browser -> DNS [label="www.google.com"];
+  }
+
+  subgraph cluster_tcpip {
+    label="TCP/IP";
+    Firewall [label="Firewall", shape=box];
+    LoadBalancer [label="Load Balancer", shape=box];
+    WebServer [label="Web Server", shape=box];
+    ApplicationServer [label="Application Server", shape=box];
+    Database [label="Database", shape=box];
+
+    DNS -> Firewall;
+    Firewall -> LoadBalancer;
+    LoadBalancer -> WebServer;
+    WebServer -> ApplicationServer;
+    ApplicationServer -> Database;
+  }
+
+  subgraph cluster_https {
+    label="HTTPS/SSL";
+    Browser -> WebServer [label="Encrypted Traffic"];
+  }
+
+  Browser -> DNS [style=invis];
+  DNS -> Browser [style=invis];
+
+  Browser -> Firewall [label="TCP/IP Connection"];
+  Firewall -> Browser [label="TCP/IP Connection", style=invis];
+
+  WebServer -> Browser [label="Web Page"];
+  ApplicationServer -> WebServer [label="Web Page Generation"];
+  Database -> ApplicationServer [label="Data Request"];
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 0x13-firewall
 
 ## Description
@@ -15,3 +16,6 @@ This projects deals with understanding what a firewall is and configuring a fire
 ## Authors :black_nib:
 
 [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)
+=======
+# 0x13-firewall
+>>>>>>> 61c60a93faa8f2defb44910681d85f99e37f9186
